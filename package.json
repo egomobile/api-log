@@ -1,6 +1,6 @@
 {
   "name": "@egomobile/api-log",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Extension for js-log to store in logs-service",
   "main": "lib/index.js",
   "engines": {
@@ -19,6 +19,13 @@
   },
   "author": "Next.e.GO Mobile SE, Aachen, Germany",
   "license": "LGPL-3.0",
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "lib",
+    "!lib/**/*.map",
+    "README.md"
+  ],
   "dependencies": {
     "@types/node": "12.20.27",
     "axios": "0.24.0",
