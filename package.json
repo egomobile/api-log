@@ -19,6 +19,13 @@
   },
   "author": "Next.e.GO Mobile SE, Aachen, Germany",
   "license": "LGPL-3.0",
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "lib",
+    "!lib/**/*.map",
+    "README.md"
+  ],
   "dependencies": {
     "@types/node": "12.20.27",
     "axios": "0.24.0",
