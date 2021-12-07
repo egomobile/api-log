@@ -16,7 +16,7 @@
 import joi from 'joi';
 import axios from 'axios';
 
-import { AsyncLoggerMiddleware, LoggerMiddleware, LogType, NextFunction } from '@egomobile/log';
+import log, { AsyncLoggerMiddleware, LoggerMiddleware, LogType, NextFunction } from '@egomobile/log';
 import { IUseApiLoggerOptions } from './types';
 
 const apiLogSchema = joi.object({
@@ -149,3 +149,10 @@ export function useApiLogger(options?: IUseApiLoggerOptions | null | undefined):
         }
     };
 };
+
+// export everything from @egomobile/log.
+export * from '@egomobile/log';
+
+// make default logger instance available as
+// default export
+export default log;

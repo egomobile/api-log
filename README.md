@@ -36,7 +36,7 @@ The following modules are defined in [peerDependencies](https://nodejs.org/uk/bl
 
 ```typescript
 import log, { consoleLogger, useFallback } from '@egomobile/log';
-import { useApiLogger } from "@egomobile/api-log"
+import { useApiLogger } from "@egomobile/api-log";
 
 // reset the logger to configure it from scratch.
 log.reset();
