@@ -47,13 +47,28 @@ log.use(useFallback(
      consoleLogger()
 ));
 
+
+/**
+ * add environment and severity properties and send request to logs-service.
+ */
 log.debug({
    message: 'some message',
    details: 'some details'
-}); // add environment and severity properties and send request to logs-service.
+}); 
 
-
-log.debug('a random string'); // an invalid log, so use console logger fallback.
+/**
+ * since version 0.2.0, this package supports plain strings. 
+ *
+ * if only string is passed, it will be converted into an object.
+ * 
+ * example: 'a random string' becomes 
+ * 
+ * {
+ *     message: 'a random string',
+ *     details: 'a random string'
+ * }
+ */   
+log.debug('a random string');
 ```
 
 ## Documentation

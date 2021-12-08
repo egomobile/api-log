@@ -128,7 +128,13 @@ export function useApiLogger(options?: IUseApiLoggerOptions | null | undefined):
                 throw new TypeError('log type must come from enum');
         }
 
-        const data = args[0];
+        let data = args[0];
+        if (typeof data === 'string') {
+            data = {
+                message: data,
+                details: data
+            };
+        }
         const log = { ...data, environment, severity };
         const validationResult = apiLogSchema.validate(log);
         if (validationResult.error) {
