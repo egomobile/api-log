@@ -130,9 +130,20 @@ export function useApiLogger(options?: IUseApiLoggerOptions | null | undefined):
 
         let data = args[0];
         if (typeof data === 'string') {
+            let metadata: any;
+            if (args.length > 0) {
+                metadata = {};
+                for (const entry of Object.entries(args)) {
+                    if (entry[0] !== '0') {  // not the first one
+                        metadata[entry[0]] = entry[1];  // 0 => key; 1 => value
+                    }
+                }
+            }
+
             data = {
                 message: data,
-                details: data
+                details: data,
+                metadata
             };
         }
         const log = { ...data, environment, severity };
