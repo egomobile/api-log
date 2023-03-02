@@ -14,6 +14,11 @@
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 /**
+ * Meta data for a `IApiLog` object.
+ */
+export type ApiLogMetadata = { [name: string]: IApiLogMetadata; };
+
+/**
  * Options for 'useApiLogger()' function.
  */
 export interface IUseApiLoggerOptions {
@@ -44,7 +49,7 @@ export interface IApiLog {
      * environment prop represents the actual stage of the application.
      * will be overwritten by the package with environment variable i-e: ENVIRONMENT
      */
-    environment?: 'dev' | 'test' | 'prod';
+    environment?: "dev" | "test" | "prod";
     /**
      * body prop represents additional information about request body.
      * Optional.
@@ -94,12 +99,12 @@ export interface IApiLog {
      * severity prop represents how severe the log is.
      * will be overwritten by the method of the log.
      */
-    severity?: 'error' | 'debug' | 'warning' | 'info';
+    severity?: "error" | "debug" | "warning" | "info";
     /**
      * metadata prop is a collection of objects to add extra information to the log.
      * Optional.
      */
-    metadata?: { [name: string]: IApiLogMetadata };
+    metadata?: { [name: string]: IApiLogMetadata; };
 }
 
 /**
@@ -111,3 +116,5 @@ export interface IApiLogMetadata {
      */
     value: any;
 }
+
+export * from "./classes";

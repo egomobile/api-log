@@ -13,29 +13,29 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-import joi from 'joi';
-import axios from 'axios';
+import joi from "joi";
+import axios from "axios";
 
-import log, { AsyncLoggerMiddleware, LoggerMiddleware, LogType, NextFunction } from '@egomobile/log';
-import { IUseApiLoggerOptions } from './types';
+import log, { AsyncLoggerMiddleware, LoggerMiddleware, LogType, NextFunction } from "@egomobile/log";
+import { IUseApiLoggerOptions } from "./types";
 
 const apiLogSchema = joi.object({
-    environment: joi.string().strict().valid(
-        'dev', 'test', 'prod'
+    "environment": joi.string().strict().valid(
+        "dev", "test", "prod"
     ).required(),
-    body: joi.object().optional(),
-    browser: joi.object().optional(),
-    cookies: joi.object().optional(),
-    headers: joi.object().optional(),
-    os: joi.object().optional(),
-    runtime: joi.object().optional(),
-    sdk: joi.object().optional(),
-    message: joi.string().required(),
-    details: joi.string().required(),
-    severity: joi.string().strict().valid(
-        'error', 'debug', 'warning', 'info'
+    "body": joi.object().optional(),
+    "browser": joi.object().optional(),
+    "cookies": joi.object().optional(),
+    "headers": joi.object().optional(),
+    "os": joi.object().optional(),
+    "runtime": joi.object().optional(),
+    "sdk": joi.object().optional(),
+    "message": joi.string().required(),
+    "details": joi.string().required(),
+    "severity": joi.string().strict().valid(
+        "error", "debug", "warning", "info"
     ).required(),
-    metadata: joi.object().optional()
+    "metadata": joi.object().optional()
 });
 
 /**
@@ -70,37 +70,37 @@ const apiLogSchema = joi.object({
  */
 export function useApiLogger(options?: IUseApiLoggerOptions | null | undefined): AsyncLoggerMiddleware | LoggerMiddleware {
     const url = options?.url || process.env.LOGS_SERVICE_URL as string;
-    if (typeof url !== 'string') {
-        throw new TypeError('url must be of type string');
+    if (typeof url !== "string") {
+        throw new TypeError("url must be of type string");
     }
 
     const key = options?.key || process.env.LOGS_SERVICE_KEY as string;
-    if (typeof key !== 'string') {
-        throw new TypeError('key must be of type string');
+    if (typeof key !== "string") {
+        throw new TypeError("key must be of type string");
     }
 
     const client = options?.client || process.env.LOGS_SERVICE_CLIENT as string;
-    if (typeof client !== 'string') {
-        throw new TypeError('client must be of type string');
+    if (typeof client !== "string") {
+        throw new TypeError("client must be of type string");
     }
 
     const config = {
-        headers: {
-            'x-api-key': key,
-            'x-api-client': client
+        "headers": {
+            "x-api-key": key,
+            "x-api-client": client
         }
     };
 
     let environment = process.env.ENVIRONMENT?.toLowerCase().trim();
     if (!environment?.length) {
         const nodeEnv = process.env.NODE_ENV?.toLowerCase().trim();
-        if (nodeEnv === 'development') {
-            environment = 'dev';
+        if (nodeEnv === "development") {
+            environment = "dev";
         }
     }
 
     if (!environment?.length) {
-        environment = 'prod';
+        environment = "prod";
     }
 
     return (type: LogType, args: any[], done?: NextFunction) => {
@@ -110,39 +110,39 @@ export function useApiLogger(options?: IUseApiLoggerOptions | null | undefined):
         let severity: string;
         switch (type) {
             case LogType.Error:
-                severity = 'error';
+                severity = "error";
                 break;
             case LogType.Debug:
-                severity = 'debug';
+                severity = "debug";
                 break;
             case LogType.Warn:
-                severity = 'warning';
+                severity = "warning";
                 break;
             case LogType.Info:
-                severity = 'info';
+                severity = "info";
                 break;
             case LogType.Default:
-                severity = 'info';
+                severity = "info";
                 break;
             default:
-                throw new TypeError('log type must come from enum');
+                throw new TypeError("log type must come from enum");
         }
 
         let data = args[0];
-        if (typeof data === 'string') {
+        if (typeof data === "string") {
             let metadata: any;
             if (args.length > 0) {
                 metadata = {};
                 for (const entry of Object.entries(args)) {
-                    if (entry[0] !== '0') {  // not the first one
+                    if (entry[0] !== "0") {  // not the first one
                         metadata[entry[0]] = entry[1];  // 0 => key; 1 => value
                     }
                 }
             }
 
             data = {
-                message: data,
-                details: data,
+                "message": data,
+                "details": data,
                 metadata
             };
         }
@@ -150,13 +150,15 @@ export function useApiLogger(options?: IUseApiLoggerOptions | null | undefined):
         const validationResult = apiLogSchema.validate(log);
         if (validationResult.error) {
             done!(new Error(validationResult.error.message));
-        } else {
+        }
+        else {
             axios
                 .post(url, log, config)
                 .then(response => {
                     if (response.status !== 200) {
                         done!(new Error(`Unexpected response: ${response.status}`));
-                    } else {
+                    }
+                    else {
                         done!();
                     }
                 })
@@ -167,8 +169,10 @@ export function useApiLogger(options?: IUseApiLoggerOptions | null | undefined):
     };
 };
 
+export * from "./types";
+
 // export everything from @egomobile/log.
-export * from '@egomobile/log';
+export * from "@egomobile/log";
 
 // make default logger instance available as
 // default export
