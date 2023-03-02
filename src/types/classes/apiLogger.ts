@@ -39,10 +39,11 @@ export interface IApiLogger {
      * log.debug('my message with metadata', 'and details', { foo: 42 })
      * ```
      */
+    debug(log: IApiLog): void;
     debug(message: string): void;
     debug(message: string, details: string): void;
+    debug(message: string, metadata: ApiLogMetadata): void;
     debug(message: string, details: string, metadata: ApiLogMetadata): void;
-    debug(message: string, detailsOrMetadata?: Nilable<string | ApiLogMetadata>, metadata?: Nilable<ApiLogMetadata>): void;
 
     /**
      * Write strict typed ERROR message.
@@ -58,10 +59,11 @@ export interface IApiLogger {
      * log.error('my message with metadata', 'and details', { foo: 42 })
      * ```
      */
+    error(log: IApiLog): void;
     error(message: string): void;
     error(message: string, details: string): void;
+    error(message: string, metadata: ApiLogMetadata): void;
     error(message: string, details: string, metadata: ApiLogMetadata): void;
-    error(message: string, detailsOrMetadata?: Nilable<string | ApiLogMetadata>, metadata?: Nilable<ApiLogMetadata>): void;
 
     /**
      * Write strict typed INFO message.
@@ -77,10 +79,11 @@ export interface IApiLogger {
      * log.info('my message with metadata', 'and details', { foo: 42 })
      * ```
      */
+    info(log: IApiLog): void;
     info(message: string): void;
     info(message: string, details: string): void;
+    info(message: string, metadata: ApiLogMetadata): void;
     info(message: string, details: string, metadata: ApiLogMetadata): void;
-    info(message: string, detailsOrMetadata?: Nilable<string | ApiLogMetadata>, metadata?: Nilable<ApiLogMetadata>): void;
 
     /**
      * Write strict typed TRACE message.
@@ -96,10 +99,11 @@ export interface IApiLogger {
      * log.trace('my message with metadata', 'and details', { foo: 42 })
      * ```
      */
+    trace(log: IApiLog): void;
     trace(message: string): void;
     trace(message: string, details: string): void;
+    trace(message: string, metadata: ApiLogMetadata): void;
     trace(message: string, details: string, metadata: ApiLogMetadata): void;
-    trace(message: string, detailsOrMetadata?: Nilable<string | ApiLogMetadata>, metadata?: Nilable<ApiLogMetadata>): void;
 
     /**
      * Write strict typed WARNING message.
@@ -115,13 +119,14 @@ export interface IApiLogger {
      * log.warn('my message with metadata', 'and details', { foo: 42 })
      * ```
      */
+    warn(log: IApiLog): void;
     warn(message: string): void;
     warn(message: string, details: string): void;
+    warn(message: string, metadata: ApiLogMetadata): void;
     warn(message: string, details: string, metadata: ApiLogMetadata): void;
-    warn(message: string, detailsOrMetadata?: Nilable<string | ApiLogMetadata>, metadata?: Nilable<ApiLogMetadata>): void;
 }
 
-export class ApiLogger implements IApiLogger {
+class ApiLogger implements IApiLogger {
     /**
      * Initializes a new instance of that class.
      *
@@ -132,104 +137,109 @@ export class ApiLogger implements IApiLogger {
 
     #executeAction(
         action: LogAction,
-        message: string, detailsOrMetadata: Nilable<string | ApiLogMetadata>, metadata: Nilable<ApiLogMetadata>
+        messageOrLog: string | IApiLog, detailsOrMetadata: Nilable<string | ApiLogMetadata>, metadata: Nilable<ApiLogMetadata>
     ) {
-        if (typeof message !== "string") {
-            throw new TypeError("message must be of type string");
-        }
+        let apiLog: IApiLog;
+        if (typeof messageOrLog === "string") {
+            let details: string;
+            if (typeof detailsOrMetadata === "string") {
+                details = detailsOrMetadata;
+            }
+            else if (typeof detailsOrMetadata === "object") {
+                details = messageOrLog;
+                metadata = detailsOrMetadata;
+            }
+            else {
+                throw new TypeError("detailsOrMetadata must be of type string or object");
+            }
 
-        let details: string;
-        if (typeof detailsOrMetadata === "string") {
-            details = detailsOrMetadata;
+            if (!isNil(metadata)) {
+                if (typeof metadata !== "object") {
+                    throw new TypeError("metadata must be of type object");
+                }
+            }
+
+            const stackFrames: StackFrame[] = [];
+            let stack: any;
+            try {
+                stackFrames.push(
+                    ...getStacktrace()
+                );
+            }
+            catch {
+                stack = new Error().stack;
+            }
+
+            apiLog = {
+                "message": messageOrLog,
+                details,
+                "metadata": {
+                    "stackTrace": {
+                        "value": stack ?? stackFrames.map((frame) => {
+                            try {
+                                return {
+                                    "isNative": frame.isNative(),
+                                    "file": frame.getFileName(),
+                                    "line": frame.getLineNumber(),
+                                    "column": frame.getColumnNumber(),
+                                    "type": frame.getTypeName(),
+                                    "method": frame.getMethodName(),
+                                    "isConstructor": frame.isConstructor()
+                                };
+                            }
+                            catch {
+                                return false;
+                            }
+                        }).filter((x => {
+                            return !!x;
+                        }))
+                    },
+                    ...(metadata ?? {})
+                }
+            };
         }
-        else if (typeof detailsOrMetadata === "object") {
-            details = message;
-            metadata = detailsOrMetadata;
+        else if (typeof messageOrLog === "object") {
+            apiLog = messageOrLog;
         }
         else {
-            throw new TypeError("detailsOrMetadata must be of type string or object");
+            throw new TypeError("messageOrLog must be of type string or object");
         }
-
-        if (!isNil(metadata)) {
-            if (typeof metadata !== "object") {
-                throw new TypeError("metadata must be of type object");
-            }
-        }
-
-        const stackFrames: StackFrame[] = [];
-        let stack: any;
-        try {
-            stackFrames.push(
-                ...getStacktrace()
-            );
-        }
-        catch {
-            stack = new Error().stack;
-        }
-
-        const apiLog: IApiLog = {
-            message,
-            details,
-            "metadata": {
-                "stackTrace": {
-                    "value": stack ?? stackFrames.map((frame) => {
-                        try {
-                            return {
-                                "isNative": frame.isNative(),
-                                "file": frame.getFileName(),
-                                "line": frame.getLineNumber(),
-                                "column": frame.getColumnNumber(),
-                                "type": frame.getTypeName(),
-                                "method": frame.getMethodName(),
-                                "isConstructor": frame.isConstructor()
-                            };
-                        }
-                        catch {
-                            return false;
-                        }
-                    }).filter((x => {
-                        return !!x;
-                    }))
-                },
-                ...(metadata ?? {})
-            }
-        };
 
         action.bind(this.logger)(apiLog);
     }
 
-    public debug(message: string, detailsOrMetadata?: Nilable<string | ApiLogMetadata>, metadata?: Nilable<ApiLogMetadata>): void {
+    public debug(messageOrLog: string | IApiLog, detailsOrMetadata?: Nilable<string | ApiLogMetadata>, metadata?: Nilable<ApiLogMetadata>): void {
         return this.#executeAction(
             this.logger.debug,
-            message, detailsOrMetadata, metadata
+            messageOrLog, detailsOrMetadata, metadata
         );
     }
 
-    public error(message: string, detailsOrMetadata?: Nilable<string | ApiLogMetadata>, metadata?: Nilable<ApiLogMetadata>): void {
+    public error(messageOrLog: string | IApiLog, detailsOrMetadata?: Nilable<string | ApiLogMetadata>, metadata?: Nilable<ApiLogMetadata>): void {
         return this.#executeAction(
             this.logger.error,
-            message, detailsOrMetadata, metadata
+            messageOrLog, detailsOrMetadata, metadata
         );
     }
 
-    public info(message: string, detailsOrMetadata?: Nilable<string | ApiLogMetadata>, metadata?: Nilable<ApiLogMetadata>): void {
+    public info(messageOrLog: string | IApiLog, detailsOrMetadata?: Nilable<string | ApiLogMetadata>, metadata?: Nilable<ApiLogMetadata>): void {
         return this.#executeAction(
             this.logger.info,
-            message, detailsOrMetadata, metadata
+            messageOrLog, detailsOrMetadata, metadata
         );
     }
 
-    public trace(message: string, detailsOrMetadata?: Nilable<string | ApiLogMetadata>, metadata?: Nilable<ApiLogMetadata>): void {
+    public trace(messageOrLog: string | IApiLog, detailsOrMetadata?: Nilable<string | ApiLogMetadata>, metadata?: Nilable<ApiLogMetadata>): void {
         return this.#executeAction(
             this.logger.trace,
-            message, detailsOrMetadata, metadata
+            messageOrLog, detailsOrMetadata, metadata
         );
     }
 
-    public warn(message: string, detailsOrMetadata?: Nilable<string | ApiLogMetadata>, metadata?: Nilable<ApiLogMetadata>): void {
+    public warn(messageOrLog: string | IApiLog, detailsOrMetadata?: Nilable<string | ApiLogMetadata>, metadata?: Nilable<ApiLogMetadata>): void {
         return this.#executeAction(
             this.logger.warn,
-            message, detailsOrMetadata, metadata
+            messageOrLog, detailsOrMetadata, metadata
         );
     }
 }
