@@ -1,6 +1,6 @@
 {
   "name": "@egomobile/api-log",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "Extension for js-log to store in logs-service",
   "main": "lib/index.js",
   "engines": {

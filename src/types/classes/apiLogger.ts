@@ -167,6 +167,10 @@ class ApiLogger implements IApiLogger {
         let apiLog: IApiLog;
         if (typeof messageOrLog === "string") {
             let details: string;
+            if (isNil(detailsOrMetadata)) {
+                detailsOrMetadata = messageOrLog;
+            }
+
             if (typeof detailsOrMetadata === "string") {
                 details = detailsOrMetadata;
             }
