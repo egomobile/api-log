@@ -1,6 +1,6 @@
 # Change Log (@egomobile/api-log)
 
-## 0.4.0
+## 0.4.3
 
 - implement `IApiLogger` with `createApiLogger()` factory function
 - **BREAKING CHANGE**: require [Node.js 16](https://medium.com/the-node-js-collection/node-js-16-available-now-7f5099a97e70) now
