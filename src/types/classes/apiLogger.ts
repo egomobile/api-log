@@ -40,8 +40,8 @@ export interface IApiLogger {
      * const log = createApiLogger();
      * log.debug('my message');
      * log.debug('my message', 'my details');
-     * log.debug('my message with metadata', { foo: 42 });
-     * log.debug('my message with metadata', 'and details', { foo: 42 });
+     * log.debug('my message with metadata', { foo: { value: 42 } });
+     * log.debug('my message with metadata', 'and details', { foo: { value: 42 } });
      * ```
      */
     debug(log: IApiLog): void;
@@ -65,8 +65,8 @@ export interface IApiLogger {
      * const log = createApiLogger();
      * log.error('my message');
      * log.error('my message', 'my details');
-     * log.error('my message with metadata', { foo: 42 });
-     * log.error('my message with metadata', 'and details', { foo: 42 });
+     * log.error('my message with metadata', { foo: { value: 42 } });
+     * log.error('my message with metadata', 'and details', { foo: { value: 42 } });
      * ```
      */
     error(log: IApiLog): void;
@@ -90,8 +90,8 @@ export interface IApiLogger {
      * const log = createApiLogger();
      * log.info('my message');
      * log.info('my message', 'my details');
-     * log.info('my message with metadata', { foo: 42 });
-     * log.info('my message with metadata', 'and details', { foo: 42 });
+     * log.info('my message with metadata', { foo: { value: 42 } });
+     * log.info('my message with metadata', 'and details', { foo: { value: 42 } });
      * ```
      */
     info(log: IApiLog): void;
@@ -115,8 +115,8 @@ export interface IApiLogger {
      * const log = createApiLogger();
      * log.trace('my message');
      * log.trace('my message', 'my details');
-     * log.trace('my message with metadata', { foo: 42 });
-     * log.trace('my message with metadata', 'and details', { foo: 42 });
+     * log.trace('my message with metadata', { foo: { value: 42 } });
+     * log.trace('my message with metadata', 'and details', { foo: { value: 42 } });
      * ```
      */
     trace(log: IApiLog): void;
@@ -140,8 +140,8 @@ export interface IApiLogger {
      * const log = createApiLogger();
      * log.warn('my message');
      * log.warn('my message', 'my details');
-     * log.warn('my message with metadata', { foo: 42 });
-     * log.warn('my message with metadata', 'and details', { foo: 42 });
+     * log.warn('my message with metadata', { foo: { value: 42 } });
+     * log.warn('my message with metadata', 'and details', { foo: { value: 42 } });
      * ```
      */
     warn(log: IApiLog): void;
