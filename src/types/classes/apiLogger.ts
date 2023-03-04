@@ -35,9 +35,9 @@ export interface IApiLogger {
      *
      * @example
      * ```
-     * import { ApiLogger } from '@egomobile/log';
+     * import { createApiLogger } from '@egomobile/log';
      *
-     * const log = new ApiLogger();
+     * const log = createApiLogger();
      * log.debug('my message');
      * log.debug('my message', 'my details');
      * log.debug('my message with metadata', { foo: 42 });
@@ -60,9 +60,9 @@ export interface IApiLogger {
      *
      * @example
      * ```
-     * import { ApiLogger } from '@egomobile/log';
+     * import { createApiLogger } from '@egomobile/log';
      *
-     * const log = new ApiLogger();
+     * const log = createApiLogger();
      * log.error('my message');
      * log.error('my message', 'my details');
      * log.error('my message with metadata', { foo: 42 });
@@ -85,9 +85,9 @@ export interface IApiLogger {
      *
      * @example
      * ```
-     * import { ApiLogger } from '@egomobile/log';
+     * import { createApiLogger } from '@egomobile/log';
      *
-     * const log = new ApiLogger();
+     * const log = createApiLogger();
      * log.info('my message');
      * log.info('my message', 'my details');
      * log.info('my message with metadata', { foo: 42 });
@@ -103,16 +103,16 @@ export interface IApiLogger {
     /**
      * Write strict typed TRACE message.
      *
-     * @example
-     * ```
-     * import { ApiLogger } from '@egomobile/log';
-     *
      * @param {string} message The message.
      * @param {string} [details] Optional details.
      * @param {ApiLogMetadata} [metadata] Optional and additional metadata.
      * @param {IApiLog} log A complete log object to submit.
      *
-     * const log = new ApiLogger();
+     * @example
+     * ```
+     * import { createApiLogger } from '@egomobile/log';
+     *
+     * const log = createApiLogger();
      * log.trace('my message');
      * log.trace('my message', 'my details');
      * log.trace('my message with metadata', { foo: 42 });
@@ -135,9 +135,9 @@ export interface IApiLogger {
      *
      * @example
      * ```
-     * import { ApiLogger } from '@egomobile/log';
+     * import { createApiLogger } from '@egomobile/log';
      *
-     * const log = new ApiLogger();
+     * const log = createApiLogger();
      * log.warn('my message');
      * log.warn('my message', 'my details');
      * log.warn('my message with metadata', { foo: 42 });
