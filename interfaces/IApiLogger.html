@@ -23,7 +23,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">IApiLogger</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L27">src/types/classes/apiLogger.ts:27</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L27">src/types/classes/apiLogger.ts:27</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -46,7 +46,7 @@
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Write strict typed DEBUG message.</p>
 
-<h3>Example</h3><pre><code><span class="hl-3">import</span><span class="hl-0"> { </span><span class="hl-2">ApiLogger</span><span class="hl-0"> } </span><span class="hl-3">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@egomobile/log&#39;</span><span class="hl-0">;</span><br/><br/><span class="hl-6">const</span><span class="hl-0"> </span><span class="hl-7">log</span><span class="hl-0"> = </span><span class="hl-6">new</span><span class="hl-0"> </span><span class="hl-5">ApiLogger</span><span class="hl-0">();</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">debug</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">debug</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;my details&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">debug</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">debug</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;and details&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span>
+<h3>Example</h3><pre><code><span class="hl-3">import</span><span class="hl-0"> { </span><span class="hl-2">createApiLogger</span><span class="hl-0"> } </span><span class="hl-3">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@egomobile/log&#39;</span><span class="hl-0">;</span><br/><br/><span class="hl-6">const</span><span class="hl-0"> </span><span class="hl-7">log</span><span class="hl-0"> = </span><span class="hl-5">createApiLogger</span><span class="hl-0">();</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">debug</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">debug</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;my details&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">debug</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">debug</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;and details&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span>
 </code></pre>
 </div>
 <div class="tsd-parameters">
@@ -58,7 +58,7 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L47">src/types/classes/apiLogger.ts:47</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L47">src/types/classes/apiLogger.ts:47</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="debug.debug-2">debug<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#debug.debug-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -68,7 +68,7 @@
 <h5>message: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L48">src/types/classes/apiLogger.ts:48</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L48">src/types/classes/apiLogger.ts:48</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="debug.debug-3">debug<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, details<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#debug.debug-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -80,7 +80,7 @@
 <h5>details: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L49">src/types/classes/apiLogger.ts:49</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L49">src/types/classes/apiLogger.ts:49</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="debug.debug-4">debug<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, metadata<span class="tsd-signature-symbol">: </span><a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#debug.debug-4" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -92,7 +92,7 @@
 <h5>metadata: <a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L50">src/types/classes/apiLogger.ts:50</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L50">src/types/classes/apiLogger.ts:50</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="debug.debug-5">debug<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, details<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, metadata<span class="tsd-signature-symbol">: </span><a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#debug.debug-5" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -106,7 +106,7 @@
 <h5>metadata: <a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L51">src/types/classes/apiLogger.ts:51</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L51">src/types/classes/apiLogger.ts:51</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="error" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>error</span><a href="#error" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -114,7 +114,7 @@
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Write strict typed ERROR message.</p>
 
-<h3>Example</h3><pre><code><span class="hl-3">import</span><span class="hl-0"> { </span><span class="hl-2">ApiLogger</span><span class="hl-0"> } </span><span class="hl-3">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@egomobile/log&#39;</span><span class="hl-0">;</span><br/><br/><span class="hl-6">const</span><span class="hl-0"> </span><span class="hl-7">log</span><span class="hl-0"> = </span><span class="hl-6">new</span><span class="hl-0"> </span><span class="hl-5">ApiLogger</span><span class="hl-0">();</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">error</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">error</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;my details&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">error</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">error</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;and details&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span>
+<h3>Example</h3><pre><code><span class="hl-3">import</span><span class="hl-0"> { </span><span class="hl-2">createApiLogger</span><span class="hl-0"> } </span><span class="hl-3">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@egomobile/log&#39;</span><span class="hl-0">;</span><br/><br/><span class="hl-6">const</span><span class="hl-0"> </span><span class="hl-7">log</span><span class="hl-0"> = </span><span class="hl-5">createApiLogger</span><span class="hl-0">();</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">error</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">error</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;my details&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">error</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">error</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;and details&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span>
 </code></pre>
 </div>
 <div class="tsd-parameters">
@@ -126,7 +126,7 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L72">src/types/classes/apiLogger.ts:72</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L72">src/types/classes/apiLogger.ts:72</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="error.error-2">error<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#error.error-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -136,7 +136,7 @@
 <h5>message: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L73">src/types/classes/apiLogger.ts:73</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L73">src/types/classes/apiLogger.ts:73</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="error.error-3">error<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, details<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#error.error-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -148,7 +148,7 @@
 <h5>details: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L74">src/types/classes/apiLogger.ts:74</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L74">src/types/classes/apiLogger.ts:74</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="error.error-4">error<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, metadata<span class="tsd-signature-symbol">: </span><a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#error.error-4" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -160,7 +160,7 @@
 <h5>metadata: <a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L75">src/types/classes/apiLogger.ts:75</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L75">src/types/classes/apiLogger.ts:75</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="error.error-5">error<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, details<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, metadata<span class="tsd-signature-symbol">: </span><a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#error.error-5" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -174,7 +174,7 @@
 <h5>metadata: <a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L76">src/types/classes/apiLogger.ts:76</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L76">src/types/classes/apiLogger.ts:76</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="info" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>info</span><a href="#info" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -182,7 +182,7 @@
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Write strict typed INFO message.</p>
 
-<h3>Example</h3><pre><code><span class="hl-3">import</span><span class="hl-0"> { </span><span class="hl-2">ApiLogger</span><span class="hl-0"> } </span><span class="hl-3">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@egomobile/log&#39;</span><span class="hl-0">;</span><br/><br/><span class="hl-6">const</span><span class="hl-0"> </span><span class="hl-7">log</span><span class="hl-0"> = </span><span class="hl-6">new</span><span class="hl-0"> </span><span class="hl-5">ApiLogger</span><span class="hl-0">();</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">info</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">info</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;my details&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">info</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">info</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;and details&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span>
+<h3>Example</h3><pre><code><span class="hl-3">import</span><span class="hl-0"> { </span><span class="hl-2">createApiLogger</span><span class="hl-0"> } </span><span class="hl-3">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@egomobile/log&#39;</span><span class="hl-0">;</span><br/><br/><span class="hl-6">const</span><span class="hl-0"> </span><span class="hl-7">log</span><span class="hl-0"> = </span><span class="hl-5">createApiLogger</span><span class="hl-0">();</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">info</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">info</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;my details&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">info</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">info</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;and details&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span>
 </code></pre>
 </div>
 <div class="tsd-parameters">
@@ -194,7 +194,7 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L97">src/types/classes/apiLogger.ts:97</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L97">src/types/classes/apiLogger.ts:97</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="info.info-2">info<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#info.info-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -204,7 +204,7 @@
 <h5>message: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L98">src/types/classes/apiLogger.ts:98</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L98">src/types/classes/apiLogger.ts:98</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="info.info-3">info<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, details<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#info.info-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -216,7 +216,7 @@
 <h5>details: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L99">src/types/classes/apiLogger.ts:99</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L99">src/types/classes/apiLogger.ts:99</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="info.info-4">info<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, metadata<span class="tsd-signature-symbol">: </span><a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#info.info-4" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -228,7 +228,7 @@
 <h5>metadata: <a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L100">src/types/classes/apiLogger.ts:100</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L100">src/types/classes/apiLogger.ts:100</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="info.info-5">info<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, details<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, metadata<span class="tsd-signature-symbol">: </span><a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#info.info-5" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -242,7 +242,7 @@
 <h5>metadata: <a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L101">src/types/classes/apiLogger.ts:101</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L101">src/types/classes/apiLogger.ts:101</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="trace" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>trace</span><a href="#trace" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -250,17 +250,19 @@
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Write strict typed TRACE message.</p>
 
-<h3>Example</h3><pre><code><span class="hl-3">import</span><span class="hl-0"> { </span><span class="hl-2">ApiLogger</span><span class="hl-0"> } </span><span class="hl-3">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@egomobile/log&#39;</span><span class="hl-0">;</span><br/><br/><span class="hl-0">@</span><span class="hl-2">param</span><span class="hl-0"> {</span><span class="hl-2">string</span><span class="hl-0">} </span><span class="hl-2">message</span><span class="hl-0"> </span><span class="hl-2">The</span><span class="hl-0"> </span><span class="hl-2">message</span><span class="hl-0">.</span><br/><span class="hl-0">@</span><span class="hl-2">param</span><span class="hl-0"> {</span><span class="hl-2">string</span><span class="hl-0">} [</span><span class="hl-2">details</span><span class="hl-0">] </span><span class="hl-2">Optional</span><span class="hl-0"> </span><span class="hl-2">details</span><span class="hl-0">.</span><br/><span class="hl-0">@</span><span class="hl-2">param</span><span class="hl-0"> {</span><span class="hl-2">ApiLogMetadata</span><span class="hl-0">} [</span><span class="hl-2">metadata</span><span class="hl-0">] </span><span class="hl-2">Optional</span><span class="hl-0"> </span><span class="hl-2">and</span><span class="hl-0"> </span><span class="hl-2">additional</span><span class="hl-0"> </span><span class="hl-2">metadata</span><span class="hl-0">.</span><br/><span class="hl-0">@</span><span class="hl-2">param</span><span class="hl-0"> {</span><span class="hl-2">IApiLog</span><span class="hl-0">} </span><span class="hl-2">log</span><span class="hl-0"> </span><span class="hl-7">A</span><span class="hl-0"> </span><span class="hl-2">complete</span><span class="hl-0"> </span><span class="hl-2">log</span><span class="hl-0"> </span><span class="hl-2">object</span><span class="hl-0"> </span><span class="hl-2">to</span><span class="hl-0"> </span><span class="hl-2">submit</span><span class="hl-0">.</span><br/><br/><span class="hl-6">const</span><span class="hl-0"> </span><span class="hl-7">log</span><span class="hl-0"> = </span><span class="hl-6">new</span><span class="hl-0"> </span><span class="hl-5">ApiLogger</span><span class="hl-0">();</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">trace</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">trace</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;my details&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">trace</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">trace</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;and details&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span>
+<h3>Example</h3><pre><code><span class="hl-3">import</span><span class="hl-0"> { </span><span class="hl-2">createApiLogger</span><span class="hl-0"> } </span><span class="hl-3">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@egomobile/log&#39;</span><span class="hl-0">;</span><br/><br/><span class="hl-6">const</span><span class="hl-0"> </span><span class="hl-7">log</span><span class="hl-0"> = </span><span class="hl-5">createApiLogger</span><span class="hl-0">();</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">trace</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">trace</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;my details&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">trace</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">trace</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;and details&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span>
 </code></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>log: <a href="IApiLog.html" class="tsd-signature-type" data-tsd-kind="Interface">IApiLog</a></h5></li></ul></div>
+<h5>log: <a href="IApiLog.html" class="tsd-signature-type" data-tsd-kind="Interface">IApiLog</a></h5>
+<div class="tsd-comment tsd-typography"><p>A complete log object to submit.</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L122">src/types/classes/apiLogger.ts:122</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L122">src/types/classes/apiLogger.ts:122</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="trace.trace-2">trace<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#trace.trace-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -270,7 +272,7 @@
 <h5>message: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L123">src/types/classes/apiLogger.ts:123</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L123">src/types/classes/apiLogger.ts:123</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="trace.trace-3">trace<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, details<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#trace.trace-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -282,7 +284,7 @@
 <h5>details: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L124">src/types/classes/apiLogger.ts:124</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L124">src/types/classes/apiLogger.ts:124</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="trace.trace-4">trace<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, metadata<span class="tsd-signature-symbol">: </span><a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#trace.trace-4" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -294,7 +296,7 @@
 <h5>metadata: <a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L125">src/types/classes/apiLogger.ts:125</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L125">src/types/classes/apiLogger.ts:125</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="trace.trace-5">trace<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, details<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, metadata<span class="tsd-signature-symbol">: </span><a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#trace.trace-5" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -308,7 +310,7 @@
 <h5>metadata: <a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L126">src/types/classes/apiLogger.ts:126</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L126">src/types/classes/apiLogger.ts:126</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="warn" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>warn</span><a href="#warn" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -316,7 +318,7 @@
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Write strict typed WARNING message.</p>
 
-<h3>Example</h3><pre><code><span class="hl-3">import</span><span class="hl-0"> { </span><span class="hl-2">ApiLogger</span><span class="hl-0"> } </span><span class="hl-3">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@egomobile/log&#39;</span><span class="hl-0">;</span><br/><br/><span class="hl-6">const</span><span class="hl-0"> </span><span class="hl-7">log</span><span class="hl-0"> = </span><span class="hl-6">new</span><span class="hl-0"> </span><span class="hl-5">ApiLogger</span><span class="hl-0">();</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">warn</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">warn</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;my details&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">warn</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">warn</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;and details&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span>
+<h3>Example</h3><pre><code><span class="hl-3">import</span><span class="hl-0"> { </span><span class="hl-2">createApiLogger</span><span class="hl-0"> } </span><span class="hl-3">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@egomobile/log&#39;</span><span class="hl-0">;</span><br/><br/><span class="hl-6">const</span><span class="hl-0"> </span><span class="hl-7">log</span><span class="hl-0"> = </span><span class="hl-5">createApiLogger</span><span class="hl-0">();</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">warn</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">warn</span><span class="hl-0">(</span><span class="hl-1">&#39;my message&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;my details&#39;</span><span class="hl-0">);</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">warn</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span><br/><span class="hl-2">log</span><span class="hl-0">.</span><span class="hl-5">warn</span><span class="hl-0">(</span><span class="hl-1">&#39;my message with metadata&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;and details&#39;</span><span class="hl-0">, { </span><span class="hl-2">foo:</span><span class="hl-0"> </span><span class="hl-8">42</span><span class="hl-0"> });</span>
 </code></pre>
 </div>
 <div class="tsd-parameters">
@@ -328,7 +330,7 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L147">src/types/classes/apiLogger.ts:147</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L147">src/types/classes/apiLogger.ts:147</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="warn.warn-2">warn<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#warn.warn-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -338,7 +340,7 @@
 <h5>message: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L148">src/types/classes/apiLogger.ts:148</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L148">src/types/classes/apiLogger.ts:148</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="warn.warn-3">warn<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, details<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#warn.warn-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -350,7 +352,7 @@
 <h5>details: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L149">src/types/classes/apiLogger.ts:149</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L149">src/types/classes/apiLogger.ts:149</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="warn.warn-4">warn<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, metadata<span class="tsd-signature-symbol">: </span><a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#warn.warn-4" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -362,7 +364,7 @@
 <h5>metadata: <a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L150">src/types/classes/apiLogger.ts:150</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L150">src/types/classes/apiLogger.ts:150</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="warn.warn-5">warn<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, details<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, metadata<span class="tsd-signature-symbol">: </span><a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#warn.warn-5" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -376,7 +378,7 @@
 <h5>metadata: <a href="../types/ApiLogMetadata.html" class="tsd-signature-type" data-tsd-kind="Type alias">ApiLogMetadata</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/egomobile/api-log/blob/2863c28/src/types/classes/apiLogger.ts#L151">src/types/classes/apiLogger.ts:151</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/egomobile/api-log/blob/6d98060/src/types/classes/apiLogger.ts#L151">src/types/classes/apiLogger.ts:151</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
