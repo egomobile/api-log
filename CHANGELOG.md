@@ -2,6 +2,7 @@
 
 # 0.5.0
 
+- add `withPrefix()` to [IApiLogger interface](https://egomobile.github.io/api-log/interfaces/IApiLogger.html)
 - **BREAKING CHANGE**: require [Node.js 18](https://nodejs.org/de/blog/announcements/v18-release-announce) now
 
 ## 0.4.6
