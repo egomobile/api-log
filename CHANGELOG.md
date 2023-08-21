@@ -1,5 +1,9 @@
 # Change Log (@egomobile/api-log)
 
+# 0.5.0
+
+- **BREAKING CHANGE**: require [Node.js 18](https://nodejs.org/de/blog/announcements/v18-release-announce) now
+
 ## 0.4.6
 
 - implement `IApiLogger` with `createApiLogger()` factory function

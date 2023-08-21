@@ -149,6 +149,27 @@ export interface IApiLogger {
     warn(message: string, details: string): void;
     warn(message: string, metadata: ApiLogMetadata): void;
     warn(message: string, details: string, metadata: ApiLogMetadata): void;
+
+    /**
+     * Creates a copy of this logger and automatically a specific prefix to each `message`
+     * and `details` value.
+     *
+     * @param {string} prefix The prefix.
+     *
+     * @return {IApiLogger} The new instance.
+     *
+     * @example
+     * ```
+     * import { createApiLogger } from '@egomobile/log';
+     *
+     * const log = createApiLogger();
+     * log.info('my message');  // logs 'my message'
+     *
+     * const logWithPrefix = log.withPrefix('FOO-PREFIX: ');
+     * logWithPrefix.info('my message');  // logs 'FOO-PREFIX: my message'
+     * ```
+     */
+    withPrefix(prefix: string): IApiLogger;
 }
 
 class ApiLogger implements IApiLogger {
@@ -156,9 +177,12 @@ class ApiLogger implements IApiLogger {
      * Initializes a new instance of that class.
      *
      * @param {ILogger} logger The (custom) logger to use.
+     * @param {string} _prefix The prefix to automatically add to each `message` and `details`.
      */
-    public constructor(public readonly logger: ILogger) {
-    }
+    public constructor(
+        public readonly logger: ILogger,
+        private readonly _prefix: string
+    ) { }
 
     #executeAction(
         action: LogAction,
@@ -200,8 +224,8 @@ class ApiLogger implements IApiLogger {
             }
 
             apiLog = {
-                "message": messageOrLog,
-                details,
+                "message": `${this._prefix}${messageOrLog}`,
+                "details": `${this._prefix}${details}`,
                 "metadata": {
                     "stackTrace": {
                         "value": stack ?? stackFrames.map((frame) => {
@@ -271,6 +295,10 @@ class ApiLogger implements IApiLogger {
             messageOrLog, detailsOrMetadata, metadata
         );
     }
+
+    public withPrefix(prefix: string): IApiLogger {
+        return new ApiLogger(this.logger, prefix);
+    }
 }
 
 /**
@@ -281,5 +309,5 @@ class ApiLogger implements IApiLogger {
  * @returns {IApiLogger} The new instance.
  */
 export function createApiLogger(logger = log): IApiLogger {
-    return new ApiLogger(logger);
+    return new ApiLogger(logger, "");
 }
